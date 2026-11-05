@@ -201,3 +201,39 @@ footer {
   color: #777;
   font-size: 0.9rem;
 }
+/* ===== Get Started Button Animation ===== */
+.btn {
+  display: inline-block;
+  background: #4361ee;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  animation: shake 2s infinite;
+  box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+}
+
+.btn:hover {
+  background: #3a56d4;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(67, 97, 238, 0.5);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+/* ===== Investment Packages Title ===== */
+.services h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000000;
+  font-weight: 800;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+}
