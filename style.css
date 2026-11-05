@@ -107,10 +107,32 @@ section {
 }
 
 .services h2 {
+  display: inline-block;
+  background: #0a1628;               /* Navy blue */
+  color: #ffffff;
+  padding: 16px 36px;
+  border-radius: 50px;                /* Makes it circular/rounded box */
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  margin: 10px auto 40px;
   text-align: center;
-  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  animation: pulseZoom 2.2s ease-in-out infinite;
 }
 
+@keyframes pulseZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.09);
+  }
+}
+.services {
+  text-align: center;
+  padding: 50px 0;
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
