@@ -37,13 +37,40 @@ section {
   padding: 50px 0;
 }
 
-.hero {
+..hero {
   text-align: center;
-  background: white;
-  border-radius: 12px;
+  background: #0a1628;          /* Navy blue */
+  color: white;
+  border-radius: 20px;
   padding: 40px 30px;
   margin-top: 30px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.hero h2 {
+  margin-bottom: 12px;
+  color: white;
+}
+
+..hero {
+  text-align: center;
+  background: #0a1628;          /* Navy blue */
+  color: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  margin-top: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.hero h2 {
+  margin-bottom: 12px;
+  color: white;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .hero h2 {
@@ -90,9 +117,9 @@ section {
   gap: 20px;
 }
 
-..card {
+.card {
   padding: 25px;
-  border-radius: 12px;
+  border-radius: 20px;          /* More rounded / softer edges */
   box-shadow: 0 4px 15px rgba(0,0,0,0.06);
   color: white;
 }
