@@ -4,13 +4,175 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.6;
-  color: #222;
-  background: url('https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2232&auto=format&fit=crop') no-repeat center center fixed;
-  background-size: cover;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - Wealthfront Financial Growths</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #0f172a;
+      color: white;
+    }
+
+    .payment-wrapper {
+      max-width: 520px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .payment-card {
+      background: #0a1628;
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .payment-card h1 {
+      font-size: 1.7rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .payment-card .subtitle {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-bottom: 30px;
+    }
+
+    .plan-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #fbbf24, #d97706);
+      color: #000;
+      font-weight: 800;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-size: 1.15rem;
+      margin-bottom: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    .instructions {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 28px;
+      text-align: left;
+      line-height: 1.6;
+      font-size: 0.98rem;
+      color: #e2e8f0;
+    }
+
+    .instructions strong {
+      color: #fbbf24;
+    }
+
+    .email-label {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-bottom: 8px;
+    }
+
+    .email-box {
+      background: #1e293b;
+      border: 2px dashed #38bdf8;
+      color: #38bdf8;
+      font-size: 1.25rem;
+      font-weight: 700;
+      padding: 18px 16px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      word-break: break-all;
+      letter-spacing: 0.5px;
+    }
+
+    .copy-note {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-bottom: 30px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      color: #94a3b8;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .back-btn:hover {
+      color: #38bdf8;
+    }
+
+    .secure-note {
+      margin-top: 25px;
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>wealthfront financial growths</h1>
+      <p>Complete your investment</p>
+    </div>
+  </header>
+
+  <div class="payment-wrapper">
+    <div class="payment-card">
+      <h1>Payment Instructions</h1>
+      <p class="subtitle">Follow the steps below to activate your package</p>
+
+      <div class="plan-badge" id="plan-name">
+        Loading package...
+      </div>
+
+      <div class="instructions">
+        <p>1. Send the exact amount of your chosen package to the email below.</p>
+        <p>2. In the email subject or body, write your <strong>full name</strong> and the package you selected.</p>
+        <p>3. We will confirm and activate your package within a few hours.</p>
+      </div>
+
+      <p class="email-label">Send payment to this email:</p>
+      <div class="email-box">
+        Wealthfrontpay@hotmail.com
+      </div>
+      <p class="copy-note">Tap and hold the email to copy it</p>
+
+      <a href="index.html" class="back-btn">← Back to Investment Packages</a>
+
+      <p class="secure-note">Secure • Private • Confirmed by email</p>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const plan = urlParams.get('plan');
+
+    const planNames = {
+      bronze: "BRONZE Package — $500",
+      silver: "SILVER Package — $1,000",
+      gold: "GOLD Package — $2,500"
+    };
+
+    const planElement = document.getElementById('plan-name');
+
+    if (plan && planNames[plan]) {
+      planElement.textContent = planNames[plan];
+    } else {
+      planElement.textContent = "Investment Package";
+    }
+  </script>
+
+</body>
+</html>
 .container {
   max-width: 1000px;
   margin: 0 auto;
