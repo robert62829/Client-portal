@@ -269,3 +269,14 @@ footer {
   transform: translateY(-12px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
 }
+/* Make entire card clickable */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-link:hover .card {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+}
